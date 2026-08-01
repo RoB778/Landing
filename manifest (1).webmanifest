@@ -1,0 +1,22 @@
+{
+  "name": "Reselia",
+  "short_name": "Reselia",
+  "description": "Respuestas a reseñas con blindaje legal, en marca blanca para tu agencia.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#1a2238",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
