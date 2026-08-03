@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# El subdominio de la aplicación no debe indexarse: es una pantalla de acceso
+# tras la que no hay contenido público. Si Google la indexara, competiría con
+# la landing por las mismas búsquedas de marca y mostraría un resultado que no
+# lleva a ninguna parte útil a quien aún no es cliente.
+Disallow: /app/
+
+Sitemap: https://reselia.es/sitemap.xml
