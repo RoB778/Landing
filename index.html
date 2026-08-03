@@ -373,6 +373,18 @@ a:focus-visible,button:focus-visible{
 /* ===========================================================
    PRECIOS
    =========================================================== */
+.aviso-beta{
+  max-width:680px;margin:0 auto 30px;padding:16px 22px;
+  border:1px solid var(--ambar);border-radius:12px;
+  background:rgba(233,196,106,.09);
+  font-size:.92rem;line-height:1.62;color:var(--tinta);text-align:center;
+}
+.aviso-beta strong{
+  display:block;margin-bottom:5px;
+  font-family:var(--mono,'IBM Plex Mono',monospace);
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ambar);
+}
 .precios{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
 .plan{
   background:var(--papel-puro);
@@ -681,6 +693,19 @@ footer{border-top:1px solid var(--linea);padding:38px 0;font-size:.87rem;color:v
       <span class="eyebrow">Precios</span>
       <h2>Se paga con el cuarto cliente. El resto es margen.</h2>
       <p>Cobras a cada cliente por respuestas, contenido SEO e informe. Con lo que uno solo te deja al mes, el software ya está pagado.</p>
+    </div>
+
+    <!-- Aviso de beta. Va ANTES de las tarjetas a propósito: sin esto, alguien
+         recorre los precios, pulsa "Empezar" y se encuentra los botones de pago
+         desactivados dentro de la aplicación, sin explicación previa. Esa
+         contradicción entre lo que promete la web y lo que hace el producto es
+         justo lo que hace desconfiar a una agencia en los primeros treinta
+         segundos. Retirar este bloque cuando MODO_BETA_SIN_PAGOS pase a False. -->
+    <div class="aviso-beta">
+      <strong>Beta abierta · acceso gratuito</strong>
+      Ahora mismo no se cobra nada y no hace falta introducir ninguna tarjeta.
+      Los precios de abajo son los que se aplicarán al terminar la beta, y te
+      avisaremos con antelación antes de que eso ocurra.
     </div>
 
     <div class="precios">
