@@ -29,6 +29,69 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="canonical" href="https://reselia.es/">
 
+<!-- ===================================================================
+     DATOS ESTRUCTURADOS (JSON-LD)
+     Los meta tags de arriba le dicen a Google cómo TITULAR el resultado.
+     Esto le dice QUÉ ES esto: que es software, de qué categoría, para qué
+     mercado y a qué precio. Sin esto, Google tiene que deducirlo del texto
+     de la página, y con una landing corta suele deducir mal.
+
+     También es lo que habilita los resultados enriquecidos y lo que leen
+     los buscadores conversacionales cuando alguien pregunta "herramientas
+     para responder reseñas de Google".
+     =================================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Reselia",
+  "url": "https://reselia.es/",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Gestión de reputación online",
+  "operatingSystem": "Web",
+  "inLanguage": "es-ES",
+  "description": "Reselia genera respuestas profesionales a las reseñas de Google con blindaje legal automático y SEO local integrado. Pensado para agencias que gestionan la reputación de varios negocios en marca blanca.",
+  "featureList": [
+    "Respuestas a reseñas con auditoría jurídica automática",
+    "SEO local integrado de forma natural",
+    "Marca blanca para agencias",
+    "Informes en PDF con la marca de la agencia",
+    "Gestión de varios locales y usuarios"
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "EUR",
+    "lowPrice": "0",
+    "highPrice": "349",
+    "offerCount": "5"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Agencias de marketing y negocios locales",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "España"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Reselia",
+  "url": "https://reselia.es/",
+  "logo": "https://reselia.es/icon-512.png",
+  "email": "hola@reselia.es",
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  }
+}
+</script>
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
