@@ -1005,7 +1005,7 @@ btnInstalar.addEventListener('click', async function () {
     var textoOriginal = txt ? txt.textContent : null;
     if (txt) { txt.textContent = 'Preparando…'; }
     btnInstalar.disabled = true;
-    await esperarPrompt(1600);
+    await esperarPrompt(3000);
     btnInstalar.disabled = false;
     if (txt && textoOriginal !== null) { txt.textContent = textoOriginal; }
   }
@@ -1064,13 +1064,17 @@ btnInstalar.addEventListener('click', async function () {
     return;
   }
 
-  // CASO 5 — escritorio Chrome/Edge que aún no ha marcado la página como instalable
-  modalTitulo.textContent = 'Instalar Reselia en el escritorio';
-  modalTexto.textContent  = 'Si el botón no la ha instalado sola, se hace desde la barra de direcciones.';
+  // CASO 5 — escritorio Chrome/Edge: el navegador aún no ha disparado el evento
+  // pero la instalación nativa SÍ está disponible. En Windows con Chrome/Edge
+  // el icono de instalar aparece directamente en la barra de direcciones (un
+  // pequeño icono de pantalla con una flecha). No hacen falta instrucciones
+  // complicadas: con un clic ahí se instala como app de escritorio.
+  modalTitulo.textContent = 'Instala Reselia en tu escritorio';
+  modalTexto.textContent  = 'Chrome y Edge en Windows la instalan en un clic desde la barra de direcciones.';
   pintarPasos([
-    'Busca el icono de <b>instalar</b> a la derecha de la barra de direcciones.',
-    'O abre el menú del navegador y elige <b>«Instalar Reselia»</b>.',
-    'Confirma y se abrirá en su propia ventana, como una aplicación.'
+    'Mira la <b>barra de direcciones</b> del navegador — a la derecha verás un pequeño icono de instalar (una pantalla con una flecha ↓).',
+    'Haz clic en ese icono y confirma. Reselia se abrirá como una app independiente en tu escritorio.',
+    'Si no ves el icono, abre el menú del navegador (los tres puntos ···) y busca <b>«Instalar Reselia»</b> o <b>«Instalar como aplicación»</b>.'
   ]);
   abrirModal();
 });
